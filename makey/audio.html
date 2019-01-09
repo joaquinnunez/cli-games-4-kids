@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+var platano = new Audio('./platano.ogg');
+var limon = new Audio('./limon.ogg');
+var manzana = new Audio('./manzana.ogg');
+var naranja = new Audio('./naranja.ogg');
+platano.load();
+limon.load();
+manzana.load();
+naranja.load();
+var audios = {38: platano, 40: limon, 37: manzana, 39: naranja};
+$(document).ready(function(){
+    $("body").keydown(function(e){
+        audios[e.which].play();
+    });
+});
+</script>
+</head>
+<body>
+<p>up platano</p>
+<p>down limon</p>
+</body>
+</html>
